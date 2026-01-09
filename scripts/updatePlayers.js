@@ -29,11 +29,6 @@ async function getPlayerRank({ gameName, tagLine }) {
     `https://${REGIONAL}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(gameName)}/${encodeURIComponent(tagLine)}`
   );
 
-  // summoner (for display name)
-  const summoner = await riotFetch(
-    `https://${PLATFORM}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${account.puuid}`
-  );
-
   // rank by puuid
   const entries = await riotFetch(
     `https://${PLATFORM}.api.riotgames.com/lol/league/v4/entries/by-puuid/${account.puuid}`
@@ -44,7 +39,9 @@ async function getPlayerRank({ gameName, tagLine }) {
   return {
   name: `${gameName}#${tagLine}`,
   rank: solo ? `${solo.tier} ${solo.rank}` : "UNRANKED",
-  lp: solo ? solo.leaguePoints : null
+  lp: solo ? solo.leaguePoints : null,
+  wins: solo ? solo.wins : null,
+  losses: solo ? solo.losses : null
   };
 }
 
