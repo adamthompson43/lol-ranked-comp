@@ -23,6 +23,20 @@ function formatClimb(diff) {
   return diff > 0 ? `+${diff} LP` : `${diff} LP`;
 }
 
+function calcWinrate(wins, losses) {
+  if (wins == null || losses == null) return "N/A";
+
+  const total = wins + losses;
+  if (total === 0) return "N/A";
+
+  return `${((wins / total) * 100).toFixed(1)}%`;
+}
+
+function calcGames(wins, losses) {
+    if (wins == null || losses == null) return "0";
+    return wins + losses;
+    }
+
 async function main() {
   const status = document.getElementById("status");
   const grid = document.getElementById("grid");
@@ -45,6 +59,14 @@ async function main() {
 
         <div class="cell start-rank">
         ${p.startingRank}${p.startingLP !== null ? ` - ${p.startingLP} LP` : ""}
+        </div>
+
+        <div class="cell games">
+        ${calcGames(p.wins, p.losses)}
+        </div>
+
+        <div class="cell winrate">
+        ${calcWinrate(p.wins, p.losses)}
         </div>
 
         <div class="cell climb ${lpDiff > 0 ? "positive" : lpDiff < 0 ? "negative" : ""}">

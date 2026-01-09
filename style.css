@@ -34,15 +34,19 @@ body {
 
   display: grid;
   grid-template-columns:
-    2fr   /* name */
-    2fr   /* start rank */
-    2fr   /* current rank */
-    90px; /* LP diff */
+    2.5fr  /* name */
+    2fr    /* start rank */
+    2fr    /* current rank */
+    1fr    /* games */
+    1fr    /* winrate */
+    90px;  /* LP diff */
 
   align-items: center;
   gap: 16px;
 
   font-variant-numeric: tabular-nums;
+
+  justify-items: start;
 }
 
 .header-card {
@@ -95,7 +99,7 @@ header.wrap {
 }
 
 .card .cell.rank {
-  text-align: right;
+  text-align: left;
 }
 
 .card:nth-child(even) {
@@ -107,7 +111,7 @@ header.wrap {
 }
 
 .card .cell.climb {
-  text-align: right;
+  text-align: left;
   font-weight: 600;
 }
 
@@ -123,8 +127,22 @@ header.wrap {
 .card .cell.start-rank {
   font-weight: 600;
   font-size: 14px;
-  text-align: right;
+  text-align: left;
 }
 
+.header-row {
+  margin-bottom: 12px;
+  font-weight: 600;
+  background: rgb(103, 103, 103, 0.9);
+  color: white;
+  border-color: rgb(103, 103, 103);
+}
+
+.header-row:hover {
+  background: rgba(255, 255, 255, 0.9);
+  background: rgb(103, 103, 103, 0.9);
+  color: white;
+  border-color: rgb(103, 103, 103);
+}
 
 
