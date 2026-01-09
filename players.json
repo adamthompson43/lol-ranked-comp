@@ -1,0 +1,11 @@
+{
+  "region": "euw1",
+  "players": [
+    { "gameName": "PlayerOne", "tagLine": "EUW" },
+    { "gameName": "PlayerTwo", "tagLine": "EUW" },
+    { "gameName": "PlayerThree", "tagLine": "EUW" },
+    { "gameName": "PlayerFour", "tagLine": "EUW" },
+    { "gameName": "PlayerFive", "tagLine": "EUW" },
+    { "gameName": "PlayerSix", "tagLine": "EUW" }
+  ]
+}
