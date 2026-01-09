@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-01-09T21:53:00.251Z",
+  "updatedAt": "2026-01-09T22:15:14.975Z",
   "players": [
     {
       "name": "the wolf#rugby",
       "currentRank": "UNRANKED",
       "currentLP": 0,
-      "wins": null,
-      "losses": null,
+      "wins": 0,
+      "losses": 0,
       "startingRank": "SILVER IV",
       "startingLP": 37
     },
@@ -14,8 +14,8 @@
       "name": "Josh#7012",
       "currentRank": "UNRANKED",
       "currentLP": 0,
-      "wins": null,
-      "losses": null,
+      "wins": 0,
+      "losses": 0,
       "startingRank": "SILVER II",
       "startingLP": 30
     },
@@ -41,8 +41,8 @@
       "name": "CableB#top",
       "currentRank": "UNRANKED",
       "currentLP": 0,
-      "wins": null,
-      "losses": null,
+      "wins": 0,
+      "losses": 0,
       "startingRank": "PLATINUM III",
       "startingLP": 47
     },
@@ -50,8 +50,8 @@
       "name": "Vanilla Gorilla#Kappa",
       "currentRank": "UNRANKED",
       "currentLP": 0,
-      "wins": null,
-      "losses": null,
+      "wins": 0,
+      "losses": 0,
       "startingRank": "PLATINUM III",
       "startingLP": 26
     }
