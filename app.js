@@ -6,15 +6,13 @@ async function main() {
   const data = await res.json();
 
   grid.innerHTML = data.players.map(p => `
-    <div class="card">
-      <div>
-        <div class="name">${p.name}</div>
-        <div class="sub">
-          ${p.rank}${p.lp !== null ? ` - ${p.lp} LP` : ""}
-        </div>
-      </div>
+  <div class="card">
+    <div class="cell name">${p.name}</div>
+    <div class="cell rank">
+      ${p.rank}${p.lp !== null ? ` - ${p.lp} LP` : ""}
     </div>
-  `).join("");
+  </div>
+`).join("");
 
   const updatedAt = new Date(data.updatedAt);
   status.textContent = `Last updated: ${updatedAt.toLocaleString()}`;
