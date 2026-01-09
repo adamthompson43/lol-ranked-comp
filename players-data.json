@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-09T17:33:00.212Z",
+  "updatedAt": "2026-01-09T17:51:03.833Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -18,15 +18,15 @@
     {
       "name": "pipotam#mud",
       "rank": "SILVER IV",
-      "lp": 35,
-      "wins": 3,
+      "lp": 65,
+      "wins": 4,
       "losses": 4
     },
     {
       "name": "Smite2Player#Smite",
       "rank": "SILVER I",
-      "lp": 60,
-      "wins": 1,
+      "lp": 90,
+      "wins": 2,
       "losses": 4
     },
     {
