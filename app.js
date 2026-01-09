@@ -2,23 +2,19 @@ async function main() {
   const status = document.getElementById("status");
   const grid = document.getElementById("grid");
 
-  const cfg = await (await fetch("./players.json")).json();
+  const res = await fetch("./players-data.json", { cache: "no-store" });
+  const data = await res.json();
 
-  grid.innerHTML = cfg.players.map(p => `
+  grid.innerHTML = data.players.map(p => `
     <div class="card">
-      <div class="icon"></div>
       <div>
-        <div class="name">${p.gameName}#${p.tagLine}</div>
-        <div class="sub">RANKED_SOLO_5x5</div>
-      </div>
-      <div class="badge">
-        <div class="rank">UNRANKED</div>
-        <div class="lp">–</div>
+        <div class="name">${p.name}</div>
+        <div class="sub">${p.rank}</div>
       </div>
     </div>
   `).join("");
 
-  status.textContent = "Static test data loaded";
+  status.textContent = "Updated automatically";
 }
 
 main();
