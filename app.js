@@ -9,7 +9,9 @@ async function main() {
     <div class="card">
       <div>
         <div class="name">${p.name}</div>
-        <div class="sub">${p.rank}</div>
+        <div class="sub">
+          ${p.rank}${p.lp !== null ? ` – ${p.lp} LP` : ""}
+        </div>
       </div>
     </div>
   `).join("");
