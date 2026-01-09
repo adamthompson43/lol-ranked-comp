@@ -40,8 +40,8 @@ async function getPlayerRank({ gameName, tagLine, startingRank, startingLP }) {
   name: `${gameName}#${tagLine}`,
   currentRank: solo ? `${solo.tier} ${solo.rank}` : "UNRANKED",
   currentLP: solo ? solo.leaguePoints : 0,
-  wins: solo ? solo.wins : null,
-  losses: solo ? solo.losses : null,
+  wins: solo ? solo.wins : 0,
+  losses: solo ? solo.losses : 0,
 
   startingRank,
   startingLP
