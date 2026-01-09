@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-01-09T21:17:25.374Z",
+  "updatedAt": "2026-01-09T21:26:07.604Z",
   "players": [
     {
       "name": "the wolf#rugby",
-      "rank": "UNRANKED",
-      "lp": null,
+      "currentRank": "UNRANKED",
+      "currentLP": 0,
       "wins": null,
       "losses": null,
       "startingRank": "SILVER IV",
@@ -12,8 +12,8 @@
     },
     {
       "name": "Josh#7012",
-      "rank": "UNRANKED",
-      "lp": null,
+      "currentRank": "UNRANKED",
+      "currentLP": 0,
       "wins": null,
       "losses": null,
       "startingRank": "SILVER II",
@@ -21,8 +21,8 @@
     },
     {
       "name": "pipotam#mud",
-      "rank": "SILVER IV",
-      "lp": 65,
+      "currentRank": "SILVER IV",
+      "currentLP": 65,
       "wins": 4,
       "losses": 4,
       "startingRank": "GOLD I",
@@ -30,8 +30,8 @@
     },
     {
       "name": "Smite2Player#Smite",
-      "rank": "SILVER I",
-      "lp": 90,
+      "currentRank": "SILVER I",
+      "currentLP": 90,
       "wins": 2,
       "losses": 4,
       "startingRank": "PLATINUM IV",
@@ -39,8 +39,8 @@
     },
     {
       "name": "CableB#top",
-      "rank": "UNRANKED",
-      "lp": null,
+      "currentRank": "UNRANKED",
+      "currentLP": 0,
       "wins": null,
       "losses": null,
       "startingRank": "PLATINUM III",
@@ -48,8 +48,8 @@
     },
     {
       "name": "Vanilla Gorilla#Kappa",
-      "rank": "UNRANKED",
-      "lp": null,
+      "currentRank": "UNRANKED",
+      "currentLP": 0,
       "wins": null,
       "losses": null,
       "startingRank": "PLATINUM III",
