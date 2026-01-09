@@ -1,11 +1,11 @@
 {
   "region": "euw1",
   "players": [
-    { "gameName": "PlayerOne", "tagLine": "EUW" },
-    { "gameName": "PlayerTwo", "tagLine": "EUW" },
-    { "gameName": "PlayerThree", "tagLine": "EUW" },
-    { "gameName": "PlayerFour", "tagLine": "EUW" },
-    { "gameName": "PlayerFive", "tagLine": "EUW" },
-    { "gameName": "PlayerSix", "tagLine": "EUW" }
+    { "gameName": "the wolf", "tagLine": "rugby" },
+    { "gameName": "Josh", "tagLine": "7012" },
+    { "gameName": "pipotam", "tagLine": "mud" },
+    { "gameName": "Smite2Player", "tagLine": "Smite" },
+    { "gameName": "CableB", "tagLine": "top" },
+    { "gameName": "Vanilla Gorilla", "tagLine": "Kappa" }
   ]
 }
