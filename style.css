@@ -36,7 +36,6 @@ body {
   gap: 16px;
 }
 
-
 .header-card {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(8px);
@@ -71,10 +70,6 @@ header.wrap {
 .badge {
   margin-left: auto;
   text-align: right;
-}
-
-.rank {
-  font-weight: 700;
 }
 
 .lp {
@@ -126,5 +121,13 @@ header.wrap {
 .card .cell.climb.negative {
   color: #dc2626;
 }
+
+.card .cell.rank,
+.card .cell.start-rank {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: right;
+}
+
 
 

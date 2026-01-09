@@ -43,9 +43,15 @@ async function main() {
           ${p.currentRank}${p.currentLP !== null ? ` - ${p.currentLP} LP` : ""}
         </div>
 
+        <div class="cell start-rank">
+        ${p.startingRank}${p.startingLP !== null ? ` – ${p.startingLP} LP` : ""}
+        </div>
+
         <div class="cell climb ${lpDiff > 0 ? "positive" : lpDiff < 0 ? "negative" : ""}">
           ${formatClimb(lpDiff)}
         </div>
+
+
       </div>
     `;
   }).join("");
