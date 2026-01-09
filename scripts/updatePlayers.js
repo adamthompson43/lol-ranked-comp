@@ -42,8 +42,8 @@ async function getPlayerRank({ gameName, tagLine }) {
   const solo = entries.find(e => e.queueType === "RANKED_SOLO_5x5");
 
   return {
-    name: summoner.name,
-    rank: solo ? `${solo.tier} ${solo.rank}` : "UNRANKED"
+  name: `${gameName}#${tagLine}`,
+  rank: solo ? `${solo.tier} ${solo.rank}` : "UNRANKED"
   };
 }
 
