@@ -40,7 +40,7 @@ async function main() {
         <div class="cell name">${p.name}</div>
 
         <div class="cell rank">
-          ${p.currentRank}${p.currentLP !== null ? ` – ${p.currentLP} LP` : ""}
+          ${p.currentRank}${p.currentLP !== null ? ` - ${p.currentLP} LP` : ""}
         </div>
 
         <div class="cell climb ${lpDiff > 0 ? "positive" : lpDiff < 0 ? "negative" : ""}">
