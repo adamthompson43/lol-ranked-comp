@@ -19,15 +19,16 @@ function rankToPoints(rank, lp = 0) {
 }
 
 function formatClimb(diff) {
+  if (diff === null) return "-";
   if (diff === 0) return "±0 LP";
   return diff > 0 ? `+${diff} LP` : `${diff} LP`;
 }
 
 function calcWinrate(wins, losses) {
-  if (wins == null || losses == null) return "N/A";
+  if (wins == null || losses == null) return "-";
 
   const total = wins + losses;
-  if (total === 0) return "N/A";
+  if (total === 0) return "-";
 
   return `${((wins / total) * 100).toFixed(1)}%`;
 }
@@ -37,6 +38,10 @@ function calcGames(wins, losses) {
     return wins + losses;
     }
 
+function isRanked(rank) {
+  return rank && rank !== "UNRANKED";
+}
+
 async function main() {
   const status = document.getElementById("status");
   const grid = document.getElementById("grid");
@@ -45,9 +50,13 @@ async function main() {
   const data = await res.json();
 
   grid.innerHTML = data.players.map(p => {
-    const startPoints = rankToPoints(p.startingRank, p.startingLP);
-    const currentPoints = rankToPoints(p.currentRank, p.currentLP);
-    const lpDiff = currentPoints - startPoints;
+    let lpDiff = null;
+
+    if (isRanked(p.currentRank)) {
+        const startPoints = rankToPoints(p.startingRank, p.startingLP);
+        const currentPoints = rankToPoints(p.currentRank, p.currentLP);
+        lpDiff = currentPoints - startPoints;
+    }
 
     return `
       <div class="card">
@@ -72,8 +81,6 @@ async function main() {
         <div class="cell climb ${lpDiff > 0 ? "positive" : lpDiff < 0 ? "negative" : ""}">
           ${formatClimb(lpDiff)}
         </div>
-
-
       </div>
     `;
   }).join("");
