@@ -23,7 +23,7 @@ async function riotFetch(url) {
   return res.json();
 }
 
-async function getPlayerRank({ gameName, tagLine }) {
+async function getPlayerRank({ gameName, tagLine, startingRank, startingLP }) {
   // riot id to puuid
   const account = await riotFetch(
     `https://${REGIONAL}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(gameName)}/${encodeURIComponent(tagLine)}`
@@ -41,7 +41,10 @@ async function getPlayerRank({ gameName, tagLine }) {
   rank: solo ? `${solo.tier} ${solo.rank}` : "UNRANKED",
   lp: solo ? solo.leaguePoints : null,
   wins: solo ? solo.wins : null,
-  losses: solo ? solo.losses : null
+  losses: solo ? solo.losses : null,
+
+  startingRank,
+  startingLP
   };
 }
 

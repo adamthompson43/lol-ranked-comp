@@ -90,15 +90,20 @@ header.wrap {
   white-space: nowrap;
 }
 
-.card .name {
-  flex: 2;              
-  font-weight: 600;
+.card .cell.name {
+  width: 40%;
 }
 
-.card .rank {
-  flex: 1;
+.card .cell.rank {
+  width: 30%;
   text-align: right;
 }
+
+.card .cell.climb {
+  width: 90px;
+  text-align: right;
+}
+
 
 .card:nth-child(even) {
   background: rgba(255, 255, 255, 0.75);
@@ -107,4 +112,19 @@ header.wrap {
 .card:hover {
   background: rgba(255, 255, 255, 0.9);
 }
+
+.card .cell.climb {
+  width: 90px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.card .cell.climb.positive {
+  color: #16a34a;
+}
+
+.card .cell.climb.negative {
+  color: #dc2626;
+}
+
 
