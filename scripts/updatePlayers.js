@@ -56,9 +56,16 @@ async function main() {
   }
 
   fs.writeFileSync(
-    "players-data.json",
-    JSON.stringify({ players: result }, null, 2)
-  );
+  "players-data.json",
+  JSON.stringify(
+    {
+      updatedAt: new Date().toISOString(),
+      players: result
+    },
+    null,
+    2
+  )
+);
 
   console.log("Updated players-data.json");
 }

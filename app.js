@@ -16,7 +16,8 @@ async function main() {
     </div>
   `).join("");
 
-  status.textContent = "Updated automatically";
+  const updatedAt = new Date(data.updatedAt);
+  status.textContent = `Last updated: ${updatedAt.toLocaleString()}`;
 }
 
 main();
