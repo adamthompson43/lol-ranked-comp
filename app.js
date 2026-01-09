@@ -10,7 +10,7 @@ async function main() {
       <div>
         <div class="name">${p.name}</div>
         <div class="sub">
-          ${p.rank}${p.lp !== null ? ` – ${p.lp} LP` : ""}
+          ${p.rank}${p.lp !== null ? ` - ${p.lp} LP` : ""}
         </div>
       </div>
     </div>
