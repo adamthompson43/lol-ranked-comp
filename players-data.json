@@ -2,27 +2,33 @@
   "players": [
     {
       "name": "the wolf#rugby",
-      "rank": "UNRANKED"
+      "rank": "UNRANKED",
+      "lp": null
     },
     {
       "name": "Josh#7012",
-      "rank": "UNRANKED"
+      "rank": "UNRANKED",
+      "lp": null
     },
     {
       "name": "pipotam#mud",
-      "rank": "SILVER IV"
+      "rank": "SILVER IV",
+      "lp": 45
     },
     {
       "name": "Smite2Player#Smite",
-      "rank": "UNRANKED"
+      "rank": "UNRANKED",
+      "lp": null
     },
     {
       "name": "CableB#top",
-      "rank": "UNRANKED"
+      "rank": "UNRANKED",
+      "lp": null
     },
     {
       "name": "Vanilla Gorilla#Kappa",
-      "rank": "UNRANKED"
+      "rank": "UNRANKED",
+      "lp": null
     }
   ]
 }
