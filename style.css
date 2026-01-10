@@ -140,6 +140,10 @@ header.wrap {
   pointer-events: none;
 }
 
+.header-row .cell.name {
+  font-weight: 600;
+}
+
 .header-row .cell {
   font-size: 15px;
 }
