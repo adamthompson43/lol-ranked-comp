@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-10T21:44:14.715Z",
+  "updatedAt": "2026-01-10T21:47:54.514Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -9,7 +9,7 @@
       "losses": 0,
       "startingRank": "SILVER IV",
       "startingLP": 37,
-      "competitionPeakPoints": null
+      "competitionPeakPoints": 837
     },
     {
       "name": "Josh#7012",
@@ -19,7 +19,7 @@
       "losses": 0,
       "startingRank": "SILVER II",
       "startingLP": 30,
-      "competitionPeakPoints": null
+      "competitionPeakPoints": 1030
     },
     {
       "name": "pipotam#mud",
@@ -49,7 +49,7 @@
       "losses": 0,
       "startingRank": "PLATINUM III",
       "startingLP": 47,
-      "competitionPeakPoints": null
+      "competitionPeakPoints": 1747
     },
     {
       "name": "Vanilla Gorilla#Kappa",
