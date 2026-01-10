@@ -12,26 +12,6 @@ const players = cfg.players;
 const REGIONAL = "europe";
 const PLATFORM = "euw1";
 
-const RANK_ORDER = [
-  "IRON IV","IRON III","IRON II","IRON I",
-  "BRONZE IV","BRONZE III","BRONZE II","BRONZE I",
-  "SILVER IV","SILVER III","SILVER II","SILVER I",
-  "GOLD IV","GOLD III","GOLD II","GOLD I",
-  "PLATINUM IV","PLATINUM III","PLATINUM II","PLATINUM I",
-  "EMERALD IV","EMERALD III","EMERALD II","EMERALD I",
-  "DIAMOND IV","DIAMOND III","DIAMOND II","DIAMOND I",
-  "MASTER","GRANDMASTER","CHALLENGER"
-];
-
-function rankToPoints(rank, lp = 0) {
-  if (!rank || rank === "UNRANKED") return null;
-
-  const idx = RANK_ORDER.indexOf(rank);
-  if (idx === -1) return null;
-
-  return idx * 100 + lp;
-}
-
 async function riotFetch(url) {
   const res = await fetch(url, {
     headers: { "X-Riot-Token": RIOT_KEY }
@@ -55,46 +35,17 @@ async function getPlayerRank({ gameName, tagLine, startingRank, startingLP }) {
 
   const solo = entries.find(e => e.queueType === "RANKED_SOLO_5x5");
 
-  const currentRank = solo ? `${solo.tier} ${solo.rank}` : "UNRANKED";
-  const currentLP = solo ? solo.leaguePoints : 0;
-
-  const currentPoints = rankToPoints(currentRank, currentLP);
-
-  const prev = previousData.players.find(
-    p => p.name === `${gameName}#${tagLine}`
-  );
-
-  const startingPeakPoints = rankToPoints(startingRank, startingLP);
-
-  // previous competition peak (if any)
-  const previousPeak = prev?.competitionPeakPoints ?? startingPeakPoints;
-
-  // competition peak can NEVER be below starting peak
-  const competitionPeakPoints =
-    currentPoints != null
-      ? Math.max(previousPeak, currentPoints)
-      : previousPeak;
-
   return {
   name: `${gameName}#${tagLine}`,
-  currentRank,
-  currentLP,
+  currentRank: solo ? `${solo.tier} ${solo.rank}` : "UNRANKED",
+  currentLP: solo ? solo.leaguePoints : 0,
   wins: solo ? solo.wins : 0,
   losses: solo ? solo.losses : 0,
 
   startingRank,
-  startingLP,
-
-  competitionPeakPoints
+  startingLP
   };
 }
-
-let previousData = { players: [] };
-
-if (fs.existsSync("players-data.json")) {
-  previousData = JSON.parse(fs.readFileSync("players-data.json", "utf8"));
-}
-
 
 async function main() {
   const result = [];
