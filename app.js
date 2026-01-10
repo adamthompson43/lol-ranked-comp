@@ -42,6 +42,39 @@ function isRanked(rank) {
   return rank && rank !== "UNRANKED";
 }
 
+// dont understand too much whats going on here but it seems to work so im not touching it for now
+function startCountdown() {
+  const el = document.getElementById("countdown");
+  if (!el) return;
+
+  // target = 00:00 on the 9th CET
+  // CET = UTC+1 
+  const target = new Date("2026-03-09T00:00:00+01:00");
+
+  function tick() {
+    const now = new Date();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      el.textContent = "Competition ended";
+      return;
+    }
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    el.textContent =
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  tick();
+  setInterval(tick, 1000);
+}
+
+
 async function main() {
   const status = document.getElementById("status");
   const grid = document.getElementById("grid");
@@ -87,6 +120,8 @@ async function main() {
 
   const updatedAt = new Date(data.updatedAt);
   status.textContent = `Last updated: ${updatedAt.toLocaleString()}`;
+
+  startCountdown();
 }
 
 main();
