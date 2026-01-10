@@ -119,7 +119,24 @@ async function main() {
   }).join("");
 
   const updatedAt = new Date(data.updatedAt);
-  status.textContent = `Last updated: ${updatedAt.toLocaleString()}`;
+  const now = new Date();
+
+  const diffMs = now - updatedAt;
+    const diffMinutes = Math.floor(diffMs / 60000);
+
+    let text;
+    if (diffMinutes < 1) {
+    text = "just now";
+    } else if (diffMinutes === 1) {
+    text = "1 minute ago";
+    } else if (diffMinutes < 60) {
+    text = `${diffMinutes} minutes ago`;
+    } else {
+    const hours = Math.floor(diffMinutes / 60);
+    text = hours === 1 ? "1 hour ago" : `${hours} hours ago`;
+    }
+
+    status.textContent = `Last updated: ${text}`;
 
   startCountdown();
 }
