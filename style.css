@@ -140,6 +140,10 @@ header.wrap {
   pointer-events: none;
 }
 
+.header-row .cell {
+  font-size: 15px;
+}
+
 .header-row:hover {
   background: rgba(103, 103, 103, 0.9);
   color: white;
@@ -176,5 +180,6 @@ header.wrap {
   font-weight: 700;
   color: #111827;
 }
+
 
 
