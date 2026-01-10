@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-10T21:30:18.287Z",
+  "updatedAt": "2026-01-10T21:36:11.022Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -8,7 +8,8 @@
       "wins": 0,
       "losses": 0,
       "startingRank": "SILVER IV",
-      "startingLP": 37
+      "startingLP": 37,
+      "competitionPeakPoints": null
     },
     {
       "name": "Josh#7012",
@@ -17,7 +18,8 @@
       "wins": 0,
       "losses": 0,
       "startingRank": "SILVER II",
-      "startingLP": 30
+      "startingLP": 30,
+      "competitionPeakPoints": null
     },
     {
       "name": "pipotam#mud",
@@ -26,7 +28,8 @@
       "wins": 6,
       "losses": 6,
       "startingRank": "GOLD I",
-      "startingLP": 73
+      "startingLP": 73,
+      "competitionPeakPoints": 905
     },
     {
       "name": "Smite2Player#Smite",
@@ -35,7 +38,8 @@
       "wins": 4,
       "losses": 7,
       "startingRank": "PLATINUM IV",
-      "startingLP": 50
+      "startingLP": 50,
+      "competitionPeakPoints": 1230
     },
     {
       "name": "CableB#top",
@@ -44,7 +48,8 @@
       "wins": 0,
       "losses": 0,
       "startingRank": "PLATINUM III",
-      "startingLP": 47
+      "startingLP": 47,
+      "competitionPeakPoints": null
     },
     {
       "name": "Vanilla Gorilla#Kappa",
@@ -53,7 +58,8 @@
       "wins": 2,
       "losses": 3,
       "startingRank": "PLATINUM III",
-      "startingLP": 26
+      "startingLP": 26,
+      "competitionPeakPoints": 810
     }
   ]
 }
