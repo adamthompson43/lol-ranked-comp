@@ -64,11 +64,15 @@ async function getPlayerRank({ gameName, tagLine, startingRank, startingLP }) {
     p => p.name === `${gameName}#${tagLine}`
   );
 
-  const previousPeak = prev?.competitionPeakPoints ?? null;
+  const startingPeakPoints = rankToPoints(startingRank, startingLP);
 
+  // previous competition peak (if any)
+  const previousPeak = prev?.competitionPeakPoints ?? startingPeakPoints;
+
+  // competition peak can NEVER be below starting peak
   const competitionPeakPoints =
     currentPoints != null
-      ? Math.max(previousPeak ?? currentPoints, currentPoints)
+      ? Math.max(previousPeak, currentPoints)
       : previousPeak;
 
   return {
