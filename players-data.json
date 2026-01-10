@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-10T14:58:53.639Z",
+  "updatedAt": "2026-01-10T15:28:02.846Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -22,18 +22,18 @@
     {
       "name": "pipotam#mud",
       "currentRank": "SILVER IV",
-      "currentLP": 65,
+      "currentLP": 55,
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "startingRank": "GOLD I",
       "startingLP": 73
     },
     {
       "name": "Smite2Player#Smite",
       "currentRank": "GOLD IV",
-      "currentLP": 1,
+      "currentLP": 0,
       "wins": 3,
-      "losses": 6,
+      "losses": 7,
       "startingRank": "PLATINUM IV",
       "startingLP": 50
     },
