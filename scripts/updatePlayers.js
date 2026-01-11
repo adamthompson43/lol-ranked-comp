@@ -12,6 +12,24 @@ const players = cfg.players;
 const REGIONAL = "europe";
 const PLATFORM = "euw1";
 
+const RANK_ORDER = [
+  "IRON IV","IRON III","IRON II","IRON I",
+  "BRONZE IV","BRONZE III","BRONZE II","BRONZE I",
+  "SILVER IV","SILVER III","SILVER II","SILVER I",
+  "GOLD IV","GOLD III","GOLD II","GOLD I",
+  "PLATINUM IV","PLATINUM III","PLATINUM II","PLATINUM I",
+  "EMERALD IV","EMERALD III","EMERALD II","EMERALD I",
+  "DIAMOND IV","DIAMOND III","DIAMOND II","DIAMOND I",
+  "MASTER","GRANDMASTER","CHALLENGER"
+];
+
+function rankToPoints(rank, lp = 0) {
+  if (!rank || rank === "UNRANKED") return null;
+  const idx = RANK_ORDER.indexOf(rank);
+  if (idx === -1) return null;
+  return idx * 100 + lp;
+}
+
 async function riotFetch(url) {
   const res = await fetch(url, {
     headers: { "X-Riot-Token": RIOT_KEY }
@@ -22,7 +40,15 @@ async function riotFetch(url) {
   return res.json();
 }
 
+// load previous data 
+let previousData = { players: [] };
+if (fs.existsSync("players-data.json")) {
+  previousData = JSON.parse(fs.readFileSync("players-data.json", "utf8"));
+}
+
 async function getPlayerRank({ gameName, tagLine, startingRank, startingLP }) {
+  const name = `${gameName}#${tagLine}`;
+
   // riot id to puuid
   const account = await riotFetch(
     `https://${REGIONAL}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(gameName)}/${encodeURIComponent(tagLine)}`
@@ -35,15 +61,56 @@ async function getPlayerRank({ gameName, tagLine, startingRank, startingLP }) {
 
   const solo = entries.find(e => e.queueType === "RANKED_SOLO_5x5");
 
+  const currentRank = solo ? `${solo.tier} ${solo.rank}` : "UNRANKED";
+  const currentLP = solo ? solo.leaguePoints : 0;
+
+  const currentPoints = rankToPoints(currentRank, currentLP);
+
+  // starting peak baseline
+  const startingPoints = rankToPoints(startingRank, startingLP);
+  if (startingPoints == null) {
+    throw new Error(`Invalid startingRank/LP for ${name}: "${startingRank}" ${startingLP}`);
+  }
+
+  const prev = previousData.players.find(p => p.name === name);
+
+  let peakRank = prev?.peakRank ?? startingRank;
+  let peakLP   = prev?.peakLP   ?? startingLP;
+  let peakPoints = rankToPoints(peakRank, peakLP);
+
+  // if old data is missing, fall back to starting
+  if (peakPoints == null) {
+    peakRank = startingRank;
+    peakLP = startingLP;
+    peakPoints = startingPoints;
+  }
+
+  // peak can never be below starting
+  if (peakPoints < startingPoints) {
+    peakRank = startingRank;
+    peakLP = startingLP;
+    peakPoints = startingPoints;
+  }
+
+  // update peak if current is higher
+  if (currentPoints != null && currentPoints > peakPoints) {
+    peakRank = currentRank;
+    peakLP = currentLP;
+    peakPoints = currentPoints;
+  }
+
   return {
   name: `${gameName}#${tagLine}`,
-  currentRank: solo ? `${solo.tier} ${solo.rank}` : "UNRANKED",
-  currentLP: solo ? solo.leaguePoints : 0,
+  currentRank,
+  currentLP,
   wins: solo ? solo.wins : 0,
   losses: solo ? solo.losses : 0,
 
   startingRank,
-  startingLP
+  startingLP,
+
+  peakRank,
+  peakLP
   };
 }
 
