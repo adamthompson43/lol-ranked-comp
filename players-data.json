@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-11T15:56:59.478Z",
+  "updatedAt": "2026-01-11T16:27:59.738Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -12,8 +12,8 @@
       "peakRank": "UNRANKED",
       "peakLP": 0,
       "peakPoints": 0,
-      "lpDiff": -837,
-      "lpDiffOfPeak": -837
+      "lpDiff": null,
+      "lpDiffOfPeak": null
     },
     {
       "name": "Josh#7012",
@@ -26,8 +26,8 @@
       "peakRank": "UNRANKED",
       "peakLP": 0,
       "peakPoints": 0,
-      "lpDiff": -1030,
-      "lpDiffOfPeak": -1030
+      "lpDiff": null,
+      "lpDiffOfPeak": null
     },
     {
       "name": "pipotam#mud",
@@ -68,8 +68,8 @@
       "peakRank": "UNRANKED",
       "peakLP": 0,
       "peakPoints": 0,
-      "lpDiff": -1747,
-      "lpDiffOfPeak": -1747
+      "lpDiff": null,
+      "lpDiffOfPeak": null
     },
     {
       "name": "Vanilla Gorilla#Kappa",
