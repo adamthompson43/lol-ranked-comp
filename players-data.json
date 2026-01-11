@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-11T15:12:32.140Z",
+  "updatedAt": "2026-01-11T15:16:30.823Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -12,7 +12,8 @@
       "peakRank": "UNRANKED",
       "peakLP": 0,
       "peakPoints": 0,
-      "lpDiff": -837
+      "lpDiff": -837,
+      "lpDiffOfPeak": 0
     },
     {
       "name": "Josh#7012",
@@ -25,7 +26,8 @@
       "peakRank": "UNRANKED",
       "peakLP": 0,
       "peakPoints": 0,
-      "lpDiff": -1030
+      "lpDiff": -1030,
+      "lpDiffOfPeak": 0
     },
     {
       "name": "pipotam#mud",
@@ -38,7 +40,8 @@
       "peakRank": "SILVER III",
       "peakLP": 65,
       "peakPoints": 965,
-      "lpDiff": -608
+      "lpDiff": -608,
+      "lpDiffOfPeak": 0
     },
     {
       "name": "Smite2Player#Smite",
@@ -51,7 +54,8 @@
       "peakRank": "GOLD IV",
       "peakLP": 30,
       "peakPoints": 1230,
-      "lpDiff": -420
+      "lpDiff": -420,
+      "lpDiffOfPeak": 0
     },
     {
       "name": "CableB#top",
@@ -64,7 +68,8 @@
       "peakRank": "UNRANKED",
       "peakLP": 0,
       "peakPoints": 0,
-      "lpDiff": -1747
+      "lpDiff": -1747,
+      "lpDiffOfPeak": 0
     },
     {
       "name": "Vanilla Gorilla#Kappa",
@@ -77,7 +82,8 @@
       "peakRank": "SILVER III",
       "peakLP": 61,
       "peakPoints": 961,
-      "lpDiff": -765
+      "lpDiff": -765,
+      "lpDiffOfPeak": 0
     }
   ]
 }
