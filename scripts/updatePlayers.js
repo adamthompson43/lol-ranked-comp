@@ -81,9 +81,11 @@ async function getPlayerRank({ gameName, tagLine, startingRank, startingLP, peak
 
   const peakPoints = rankToPoints(bestRank, bestLP);
 
-  const lpDiff = currentPoints - rankToPoints(startingRank, startingLP);
+  const startingPoints = rankToPoints(startingRank, startingLP);
+  
+  const lpDiff = (currentRank === "UNRANKED") ? null : (currentPoints - startingPoints);
 
-  const lpDiffOfPeak = peakPoints -rankToPoints(startingRank, startingLP);
+  const lpDiffOfPeak = (bestRank === "UNRANKED") ? null : (peakPoints - startingPoints);
 
   return {
   name: `${gameName}#${tagLine}`,
