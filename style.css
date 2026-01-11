@@ -34,6 +34,7 @@ body {
 
   display: grid;
   grid-template-columns:
+    44px   /* place */
     2.5fr  /* name */
     2fr    /* current rank */
     2fr    /* peak rank */
@@ -49,6 +50,41 @@ body {
   font-variant-numeric: tabular-nums;
 
   justify-items: start;
+}
+
+.card .cell.place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 8px;
+  background: #e5e7eb;
+
+  font-weight: 800;
+  font-size: 14px;
+  color: #111827;
+}
+
+.header-row .cell.place {
+  background: rgba(103, 103, 103, 0.9);
+  color: white;
+}
+
+/* Apply medals only to non-header cards */
+.card:not(.header-row):nth-child(1) .cell.place {
+  background: gold;
+  color: #000;
+}
+.card:not(.header-row):nth-child(2) .cell.place {
+  background: silver;
+  color: #000;
+}
+.card:not(.header-row):nth-child(3) .cell.place {
+  background: #cd7f32;
+  color: #000;
 }
 
 .header-card {

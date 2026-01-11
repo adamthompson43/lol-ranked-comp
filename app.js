@@ -68,12 +68,18 @@ async function main() {
   return bVal - aVal; // highest first
   });
 
-  grid.innerHTML = sortedPlayers.map(p => {
+  grid.innerHTML = sortedPlayers.map((p, index) => {
+
+    // getting place in competition
+    const place = index + 1;
+
     const lpDiff = isRanked(p.currentRank) ? (p.lpDiff ?? null) : null;
     const peakDiff = isRanked(p.peakRank) ? (p.lpDiffOfPeak ?? null) : null;
 
     return `
       <div class="card">
+        <div class="cell place">${place}</div>
+
         <div class="cell name">${p.name}</div>
 
         <div class="cell rank">
