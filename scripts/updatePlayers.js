@@ -27,6 +27,18 @@ function rankToPoints(rank, lp = 0) {
 const cfg = JSON.parse(fs.readFileSync("players.json", "utf8"));
 const players = cfg.players;
 
+// loading previous peaks from last run, so peak persists across runs
+let previousPeaks = new Map();
+
+try {
+  const prev = JSON.parse(fs.readFileSync("players-data.json", "utf8"));
+  for (const p of prev.players ?? []) {
+    if (p?.name) previousPeaks.set(p.name, { peakRank: p.peakRank, peakLP: p.peakLP });
+  }
+} catch {
+  // first run or missing players-data.json -> ignore
+}
+
 const REGIONAL = "europe";
 const PLATFORM = "euw1";
 
@@ -60,17 +72,22 @@ async function getPlayerRank({ gameName, tagLine, startingRank, startingLP, peak
   let bestLP = peakLP ?? 0;
 
   const currentPoints = rankToPoints(currentRank, currentLP);
-  const peakPoints = rankToPoints(bestRank, bestLP);
+  const oldPeakPoints = rankToPoints(bestRank, bestLP);
 
-  if (currentPoints > peakPoints) {
+  if (currentPoints > oldPeakPoints) {
     bestRank = currentRank;
     bestLP = currentLP;
   }
 
+  const peakPoints = rankToPoints(bestRank, bestLP);
+
+  const lpDiff = currentPoints - rankToPoints(startingRank, startingLP);
+
+
   return {
   name: `${gameName}#${tagLine}`,
-  currentRank: solo ? `${solo.tier} ${solo.rank}` : "UNRANKED",
-  currentLP: solo ? solo.leaguePoints : 0,
+  currentRank,
+  currentLP,
   wins: solo ? solo.wins : 0,
   losses: solo ? solo.losses : 0,
 
@@ -78,7 +95,9 @@ async function getPlayerRank({ gameName, tagLine, startingRank, startingLP, peak
   startingLP,
 
   peakRank: bestRank,
-  peakLP: bestLP
+  peakLP: bestLP,
+  peakPoints,
+  lpDiff
   };
 }
 
@@ -86,8 +105,15 @@ async function main() {
   const result = [];
 
   for (const p of players) {
-    result.push(await getPlayerRank(p));
-  }
+  const nameKey = `${p.gameName}#${p.tagLine}`;
+  const prevPeak = previousPeaks.get(nameKey);
+
+  result.push(await getPlayerRank({
+    ...p,
+    peakRank: prevPeak?.peakRank ?? p.peakRank,
+    peakLP: prevPeak?.peakLP ?? p.peakLP
+  }));
+}
 
   fs.writeFileSync(
   "players-data.json",
