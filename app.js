@@ -62,7 +62,13 @@ async function main() {
   const res = await fetch("./players-data.json", { cache: "no-store" });
   const data = await res.json();
 
-  grid.innerHTML = data.players.map(p => {
+  const sortedPlayers = [...data.players].sort((a, b) => {
+  const aVal = a.lpDiffOfPeak ?? -Infinity;
+  const bVal = b.lpDiffOfPeak ?? -Infinity;
+  return bVal - aVal; // highest first
+  });
+
+  grid.innerHTML = sortedPlayers.map(p => {
     const lpDiff = isRanked(p.currentRank) ? (p.lpDiff ?? null) : null;
     const peakDiff = isRanked(p.peakRank) ? (p.lpDiffOfPeak ?? null) : null;
 
