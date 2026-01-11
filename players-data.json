@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-11T18:22:13.060Z",
+  "updatedAt": "2026-01-11T18:49:43.522Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -32,30 +32,30 @@
     {
       "name": "pipotam#mud",
       "currentRank": "SILVER III",
-      "currentLP": 65,
-      "wins": 8,
+      "currentLP": 95,
+      "wins": 9,
       "losses": 6,
       "startingRank": "GOLD I",
       "startingLP": 73,
       "peakRank": "SILVER III",
-      "peakLP": 65,
-      "peakPoints": 965,
-      "lpDiff": -608,
-      "lpDiffOfPeak": -608
+      "peakLP": 95,
+      "peakPoints": 995,
+      "lpDiff": -578,
+      "lpDiffOfPeak": -578
     },
     {
       "name": "Smite2Player#Smite",
       "currentRank": "GOLD IV",
-      "currentLP": 30,
-      "wins": 4,
+      "currentLP": 60,
+      "wins": 5,
       "losses": 7,
       "startingRank": "PLATINUM IV",
       "startingLP": 50,
       "peakRank": "GOLD IV",
-      "peakLP": 30,
-      "peakPoints": 1230,
-      "lpDiff": -420,
-      "lpDiffOfPeak": -420
+      "peakLP": 60,
+      "peakPoints": 1260,
+      "lpDiff": -390,
+      "lpDiffOfPeak": -390
     },
     {
       "name": "CableB#top",
