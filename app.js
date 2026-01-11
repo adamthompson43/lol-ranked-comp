@@ -54,6 +54,14 @@ function startCountdown() {
   setInterval(tick, 1000);
 }
 
+// function to generate opgg url from league id
+function opggUrlFromRiotId(riotId, region = "euw") {
+  const [gameName, tagLine] = riotId.split("#");
+  if (!gameName || !tagLine) return "#";
+
+  return `https://www.op.gg/summoners/${region}/${encodeURIComponent(gameName)}-${encodeURIComponent(tagLine)}?queue_type=SOLORANKED`;
+}
+
 
 async function main() {
   const status = document.getElementById("status");
@@ -73,6 +81,9 @@ async function main() {
     // getting place in competition
     const place = index + 1;
 
+    // generating opgg url
+    const opggUrl = opggUrlFromRiotId(p.name, "euw");
+
     const lpDiff = isRanked(p.currentRank) ? (p.lpDiff ?? null) : null;
     const peakDiff = isRanked(p.peakRank) ? (p.lpDiffOfPeak ?? null) : null;
 
@@ -80,7 +91,11 @@ async function main() {
       <div class="card">
         <div class="cell place">${place}</div>
 
-        <div class="cell name">${p.name}</div>
+        <div class="cell name">
+            <a class="name-link" href="${opggUrl}" target="_blank" rel="noopener noreferrer">
+                ${p.name}
+            </a>
+        </div>
 
         <div class="cell rank">
           ${p.currentRank}${p.currentLP !== null ? ` - ${p.currentLP} LP` : ""}
