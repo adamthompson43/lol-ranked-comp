@@ -39,7 +39,8 @@ body {
     2fr    /* current rank */
     1fr    /* games */
     1fr    /* winrate */
-    90px;  /* LP diff */
+    90px   /* current LP diff */
+    90px;  /* peak LP diff */
 
   align-items: center;
   gap: 16px;

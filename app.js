@@ -64,6 +64,7 @@ async function main() {
 
   grid.innerHTML = data.players.map(p => {
     const lpDiff = isRanked(p.currentRank) ? (p.lpDiff ?? null) : null;
+    const peakDiff = isRanked(p.peakRank) ? (p.lpDiffOfPeak ?? null) : null;
 
     return `
       <div class="card">
@@ -88,7 +89,11 @@ async function main() {
         <div class="cell climb ${lpDiff > 0 ? "positive" : lpDiff < 0 ? "negative" : ""}">
           ${formatClimb(lpDiff)}
         </div>
-      </div>
+
+        <div class="cell peak climb ${peakDiff > 0 ? "positive" : peakDiff < 0 ? "negative" : ""}">
+          ${formatClimb(peakDiff)}
+        </div>
+        </div>
     `;
   }).join("");
 
