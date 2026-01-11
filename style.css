@@ -14,7 +14,7 @@ body {
 }
 
 .wrap {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 16px;
 }
@@ -35,8 +35,9 @@ body {
   display: grid;
   grid-template-columns:
     2.5fr  /* name */
-    2fr    /* start rank */
     2fr    /* current rank */
+    2fr    /* peak rank */
+    2fr    /* start rank */ 
     1fr    /* games */
     1fr    /* winrate */
     90px   /* current LP diff */

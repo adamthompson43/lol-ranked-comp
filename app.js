@@ -80,6 +80,10 @@ async function main() {
           ${p.currentRank}${p.currentLP !== null ? ` - ${p.currentLP} LP` : ""}
         </div>
 
+        <div class="cell peak rank">
+          ${p.peakRank}${p.peakLP !== null ? ` - ${p.peakLP} LP` : ""}
+        </div>
+
         <div class="cell start-rank">
         ${p.startingRank}${p.startingLP !== null ? ` - ${p.startingLP} LP` : ""}
         </div>
@@ -99,7 +103,7 @@ async function main() {
         <div class="cell peak climb ${peakDiff > 0 ? "positive" : peakDiff < 0 ? "negative" : ""}">
           ${formatClimb(peakDiff)}
         </div>
-        </div>
+      </div>
     `;
   }).join("");
 
