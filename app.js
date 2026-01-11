@@ -1,23 +1,3 @@
-const RANK_ORDER = [
-  "IRON IV","IRON III","IRON II","IRON I",
-  "BRONZE IV","BRONZE III","BRONZE II","BRONZE I",
-  "SILVER IV","SILVER III","SILVER II","SILVER I",
-  "GOLD IV","GOLD III","GOLD II","GOLD I",
-  "PLATINUM IV","PLATINUM III","PLATINUM II","PLATINUM I",
-  "EMERALD IV","EMERALD III","EMERALD II","EMERALD I",
-  "DIAMOND IV","DIAMOND III","DIAMOND II","DIAMOND I",
-  "MASTER","GRANDMASTER","CHALLENGER"
-];
-
-function rankToPoints(rank, lp = 0) {
-  if (rank === "UNRANKED") return 0;
-
-  const idx = RANK_ORDER.indexOf(rank);
-  if (idx === -1) return 0;
-
-  return idx * 100 + lp;
-}
-
 function formatClimb(diff) {
   if (diff === null) return "-";
   if (diff === 0) return "±0 LP";
@@ -83,13 +63,7 @@ async function main() {
   const data = await res.json();
 
   grid.innerHTML = data.players.map(p => {
-    let lpDiff = null;
-
-    if (isRanked(p.currentRank)) {
-        const startPoints = rankToPoints(p.startingRank, p.startingLP);
-        const currentPoints = rankToPoints(p.currentRank, p.currentLP);
-        lpDiff = currentPoints - startPoints;
-    }
+    const lpDiff = isRanked(p.currentRank) ? (p.lpDiff ?? null) : null;
 
     return `
       <div class="card">
