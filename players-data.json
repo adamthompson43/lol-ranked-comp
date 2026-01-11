@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-11T14:19:16.596Z",
+  "updatedAt": "2026-01-11T14:39:19.003Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -49,8 +49,8 @@
     {
       "name": "Vanilla Gorilla#Kappa",
       "currentRank": "SILVER III",
-      "currentLP": 31,
-      "wins": 6,
+      "currentLP": 61,
+      "wins": 7,
       "losses": 3,
       "startingRank": "PLATINUM III",
       "startingLP": 26
