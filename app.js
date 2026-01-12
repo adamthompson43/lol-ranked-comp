@@ -1,7 +1,13 @@
 function formatClimb(diff) {
   if (diff === null) return "-";
-  if (diff === 0) return "±0 LP";
-  return diff > 0 ? `+${diff} LP` : `${diff} LP`;
+  if (diff === 0) return "→ 0";
+  return diff > 0 ? `▲ ${diff}` : `▼ ${Math.abs(diff)}`;
+}
+
+function formatClimbNumber(diff) {
+  if (diff === null) return "-";
+  if (diff === 0) return "0";
+  return diff; // keeps negative sign
 }
 
 function calcWinrate(wins, losses) {
@@ -118,11 +124,11 @@ async function main() {
         </div>
 
         <div class="cell climb ${lpDiff > 0 ? "positive" : lpDiff < 0 ? "negative" : ""}">
-          ${formatClimb(lpDiff)}
+        ${lpDiff === null ? "-" : `${formatClimb(lpDiff)} LP`}
         </div>
 
-        <div class="cell peak climb ${peakDiff > 0 ? "positive" : peakDiff < 0 ? "negative" : ""}">
-          ${formatClimb(peakDiff)}
+        <div class="cell peak climb">
+          ${formatClimbNumber(peakDiff)}
         </div>
       </div>
     `;
