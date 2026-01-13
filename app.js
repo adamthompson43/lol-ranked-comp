@@ -120,7 +120,7 @@ async function main() {
         </div>
 
         <div class="cell winrate">
-        ${calcWinrate(p.wins, p.losses)}
+        ${p.name === "CableB#top" ? "REDACTED" : calcWinrate(p.wins, p.losses)}
         </div>
 
         <div class="cell climb ${lpDiff > 0 ? "positive" : lpDiff < 0 ? "negative" : ""}">
