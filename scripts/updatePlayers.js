@@ -109,15 +109,28 @@ async function main() {
   const result = [];
 
   for (const p of players) {
-  const nameKey = `${p.gameName}#${p.tagLine}`;
-  const prevPeak = previousPeaks.get(nameKey);
+    const nameKey = `${p.gameName}#${p.tagLine}`;
+    const prevPeak = previousPeaks.get(nameKey);
 
-  result.push(await getPlayerRank({
-    ...p,
-    peakRank: prevPeak?.peakRank ?? p.peakRank,
-    peakLP: prevPeak?.peakLP ?? p.peakLP
-  }));
-}
+    result.push(await getPlayerRank({
+      ...p,
+      peakRank: prevPeak?.peakRank ?? p.peakRank,
+      peakLP: prevPeak?.peakLP ?? p.peakLP
+    }));
+  }
+  
+  let prevPlayers = null;
+  try {
+    const prev = JSON.parse(fs.readFileSync("players-data.json", "utf8"));
+    prevPlayers = prev.players ?? null;
+  } catch {
+    // no previous file
+  }
+
+  if (prevPlayers && JSON.stringify(prevPlayers) === JSON.stringify(result)) {
+    console.log("No changes in players; skipping write");
+    return;
+  }
 
   fs.writeFileSync(
   "players-data.json",
