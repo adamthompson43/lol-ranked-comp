@@ -134,6 +134,24 @@ async function main() {
     `;
   }).join("");
 
+  const infoCard = document.createElement("div");
+    infoCard.className = "card info-text-card";
+    infoCard.innerHTML = `
+    <div class="info-content">
+        <h3>Info</h3>
+        <p>
+        This leaderboard is SUPPOSED to update frequently but it probably won't : )
+        </p>
+        <p>
+        As of 13 January 2026 it's updating every 15-30 minutes. If it gets worse I might try to fix that but no promises
+        </p>
+        <p>
+        Also do not look at this site on mobile please thanks
+        </>
+    </div>
+    `;
+grid.appendChild(infoCard);
+
   const updatedAt = new Date(data.updatedAt);
   const now = new Date();
 

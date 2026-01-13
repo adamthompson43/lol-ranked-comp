@@ -232,5 +232,29 @@ header.wrap {
   text-decoration: underline;
 }
 
+.info-text-card {
+  display: block; /* disable grid */
+  padding: 20px;
+}
+
+.info-text-card .info-content {
+  max-width: 800px;
+}
+
+.info-text-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.info-text-card p {
+  margin: 6px 0;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.info-text-card {
+  margin-top: 80px; 
+}
+
 
 
