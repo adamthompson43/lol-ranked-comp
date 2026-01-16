@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-16T12:50:17.144Z",
+  "updatedAt": "2026-01-16T13:20:13.058Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -60,15 +60,15 @@
     {
       "name": "CableB#top",
       "currentRank": "GOLD II",
-      "currentLP": 89,
+      "currentLP": 78,
       "wins": 10,
-      "losses": 18,
+      "losses": 19,
       "startingRank": "PLATINUM III",
       "startingLP": 47,
       "peakRank": "GOLD I",
       "peakLP": 20,
       "peakPoints": 1520,
-      "lpDiff": -258,
+      "lpDiff": -269,
       "lpDiffOfPeak": -227
     },
     {
