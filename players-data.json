@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-01-16T22:30:11.225Z",
+  "updatedAt": "2026-01-16T23:20:11.239Z",
   "players": [
     {
       "name": "the wolf#rugby",
       "currentRank": "BRONZE II",
-      "currentLP": 97,
+      "currentLP": 87,
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "startingRank": "SILVER IV",
       "startingLP": 37,
       "peakRank": "BRONZE II",
       "peakLP": 97,
       "peakPoints": 697,
-      "lpDiff": -140,
+      "lpDiff": -150,
       "lpDiffOfPeak": -140
     },
     {
@@ -31,31 +31,31 @@
     },
     {
       "name": "pipotam#mud",
-      "currentRank": "GOLD IV",
-      "currentLP": 87,
-      "wins": 30,
+      "currentRank": "GOLD III",
+      "currentLP": 10,
+      "wins": 31,
       "losses": 30,
       "startingRank": "GOLD I",
       "startingLP": 73,
       "peakRank": "GOLD III",
       "peakLP": 58,
       "peakPoints": 1358,
-      "lpDiff": -286,
+      "lpDiff": -263,
       "lpDiffOfPeak": -215
     },
     {
       "name": "Smite2Player#Smite",
       "currentRank": "GOLD I",
-      "currentLP": 60,
-      "wins": 18,
+      "currentLP": 89,
+      "wins": 19,
       "losses": 16,
       "startingRank": "PLATINUM IV",
       "startingLP": 50,
       "peakRank": "GOLD I",
-      "peakLP": 60,
-      "peakPoints": 1560,
-      "lpDiff": -90,
-      "lpDiffOfPeak": -90
+      "peakLP": 89,
+      "peakPoints": 1589,
+      "lpDiff": -61,
+      "lpDiffOfPeak": -61
     },
     {
       "name": "CableB#top",
