@@ -1,7 +1,7 @@
 {
   "region": "euw1",
   "players": [
-    { "gameName": "the wolf", "tagLine": "rugby", "startingRank": "SILVER IV", "startingLP": 37 },
+    { "gameName": "the wolf", "tagLine": "rugby", "startingRank": "GOLD IV", "startingLP": 37 },
     { "gameName": "Josh", "tagLine": "7012", "startingRank": "SILVER II", "startingLP": 30 },
     { "gameName": "pipotam", "tagLine": "mud", "startingRank": "GOLD I", "startingLP": 73 },
     { "gameName": "Smite2Player", "tagLine": "Smite", "startingRank": "PLATINUM IV", "startingLP": 50 },
