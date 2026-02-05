@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-02-05T12:30:16.693Z",
+  "updatedAt": "2026-02-05T14:30:15.237Z",
   "players": [
     {
       "name": "the wolf#rugby",
       "currentRank": "SILVER I",
-      "currentLP": 72,
-      "wins": 47,
+      "currentLP": 94,
+      "wins": 48,
       "losses": 44,
       "startingRank": "GOLD IV",
       "startingLP": 37,
       "peakRank": "SILVER I",
       "peakLP": 96,
       "peakPoints": 1196,
-      "lpDiff": -65,
+      "lpDiff": -43,
       "lpDiffOfPeak": -41
     },
     {
@@ -74,15 +74,15 @@
     {
       "name": "Vanilla Gorilla#Kappa",
       "currentRank": "GOLD IV",
-      "currentLP": 41,
-      "wins": 29,
+      "currentLP": 64,
+      "wins": 30,
       "losses": 28,
       "startingRank": "PLATINUM III",
       "startingLP": 26,
       "peakRank": "GOLD III",
       "peakLP": 26,
       "peakPoints": 1326,
-      "lpDiff": -485,
+      "lpDiff": -462,
       "lpDiffOfPeak": -400
     }
   ]
