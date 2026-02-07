@@ -139,15 +139,9 @@ async function main() {
     infoCard.innerHTML = `
     <div class="info-content">
         <h3>Info</h3>
-        <p>
-        This leaderboard is SUPPOSED to update frequently but it probably won't : )
-        </p>
-        <p>
-        As of 13 January 2026 it's updating every 15-30 minutes. If it gets worse I might try to fix that but no promises
-        </p>
-        <p>
-        Also do not look at this site on mobile please thanks
-        </>
+          <img 
+            src="assets/horse.png" 
+          />
     </div>
     `;
 grid.appendChild(infoCard);
