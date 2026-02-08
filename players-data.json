@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-08T14:00:12.907Z",
+  "updatedAt": "2026-02-08T14:30:12.366Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -32,15 +32,15 @@
     {
       "name": "pipotam#mud",
       "currentRank": "GOLD III",
-      "currentLP": 51,
-      "wins": 63,
+      "currentLP": 70,
+      "wins": 64,
       "losses": 65,
       "startingRank": "GOLD I",
       "startingLP": 73,
       "peakRank": "GOLD II",
       "peakLP": 74,
       "peakPoints": 1474,
-      "lpDiff": -222,
+      "lpDiff": -203,
       "lpDiffOfPeak": -99
     },
     {
