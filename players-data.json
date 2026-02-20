@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-02-20T17:00:13.321Z",
+  "updatedAt": "2026-02-20T20:00:14.366Z",
   "players": [
     {
       "name": "the wolf#rugby",
       "currentRank": "GOLD IV",
-      "currentLP": 45,
-      "wins": 61,
+      "currentLP": 66,
+      "wins": 62,
       "losses": 57,
       "startingRank": "GOLD IV",
       "startingLP": 37,
       "peakRank": "GOLD III",
       "peakLP": 26,
       "peakPoints": 1326,
-      "lpDiff": 8,
+      "lpDiff": 29,
       "lpDiffOfPeak": 89
     },
     {
