@@ -28,7 +28,7 @@ function isRanked(rank) {
   return rank && rank !== "UNRANKED";
 }
 
-// dont understand too much whats going on here but it seems to work so im not touching it for now
+// countdown until end of competition
 function startCountdown() {
   const el = document.getElementById("countdown");
   if (!el) return;
