@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-01T04:08:26.344Z",
+  "updatedAt": "2026-03-01T15:30:11.028Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -46,15 +46,15 @@
     {
       "name": "Smite2Player#Smite",
       "currentRank": "GOLD I",
-      "currentLP": 42,
-      "wins": 64,
+      "currentLP": 61,
+      "wins": 65,
       "losses": 77,
       "startingRank": "PLATINUM IV",
       "startingLP": 50,
       "peakRank": "PLATINUM III",
       "peakLP": 45,
       "peakPoints": 1745,
-      "lpDiff": -108,
+      "lpDiff": -89,
       "lpDiffOfPeak": 95
     },
     {
