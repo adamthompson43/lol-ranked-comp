@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-03-04T20:00:13.585Z",
+  "updatedAt": "2026-03-04T21:00:18.553Z",
   "players": [
     {
       "name": "the wolf#rugby",
       "currentRank": "GOLD III",
-      "currentLP": 28,
-      "wins": 76,
+      "currentLP": 49,
+      "wins": 77,
       "losses": 69,
       "startingRank": "GOLD IV",
       "startingLP": 37,
       "peakRank": "GOLD III",
-      "peakLP": 47,
-      "peakPoints": 1347,
-      "lpDiff": 91,
-      "lpDiffOfPeak": 110
+      "peakLP": 49,
+      "peakPoints": 1349,
+      "lpDiff": 112,
+      "lpDiffOfPeak": 112
     },
     {
       "name": "Josh#7012",
       "currentRank": "SILVER III",
-      "currentLP": 31,
+      "currentLP": 17,
       "wins": 15,
-      "losses": 17,
+      "losses": 18,
       "startingRank": "SILVER II",
       "startingLP": 30,
       "peakRank": "SILVER III",
       "peakLP": 31,
       "peakPoints": 931,
-      "lpDiff": -99,
+      "lpDiff": -113,
       "lpDiffOfPeak": -99
     },
     {
