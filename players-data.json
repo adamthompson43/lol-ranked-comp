@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05T15:00:17.347Z",
+  "updatedAt": "2026-03-05T16:00:15.305Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -46,15 +46,15 @@
     {
       "name": "Smite2Player#Smite",
       "currentRank": "PLATINUM IV",
-      "currentLP": 59,
-      "wins": 79,
+      "currentLP": 79,
+      "wins": 80,
       "losses": 86,
       "startingRank": "PLATINUM IV",
       "startingLP": 50,
       "peakRank": "PLATINUM III",
       "peakLP": 45,
       "peakPoints": 1745,
-      "lpDiff": 9,
+      "lpDiff": 29,
       "lpDiffOfPeak": 95
     },
     {
@@ -74,16 +74,16 @@
     {
       "name": "Vanilla Gorilla#Kappa",
       "currentRank": "GOLD I",
-      "currentLP": 52,
-      "wins": 56,
+      "currentLP": 74,
+      "wins": 57,
       "losses": 45,
       "startingRank": "PLATINUM III",
       "startingLP": 26,
       "peakRank": "GOLD I",
-      "peakLP": 52,
-      "peakPoints": 1552,
-      "lpDiff": -174,
-      "lpDiffOfPeak": -174
+      "peakLP": 74,
+      "peakPoints": 1574,
+      "lpDiff": -152,
+      "lpDiffOfPeak": -152
     }
   ]
 }
