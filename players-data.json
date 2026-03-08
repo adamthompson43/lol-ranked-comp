@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-08T20:00:10.953Z",
+  "updatedAt": "2026-03-08T20:30:13.247Z",
   "players": [
     {
       "name": "the wolf#rugby",
@@ -32,15 +32,15 @@
     {
       "name": "pipotam#mud",
       "currentRank": "PLATINUM IV",
-      "currentLP": 37,
+      "currentLP": 17,
       "wins": 95,
-      "losses": 85,
+      "losses": 86,
       "startingRank": "GOLD I",
       "startingLP": 73,
       "peakRank": "PLATINUM IV",
       "peakLP": 56,
       "peakPoints": 1656,
-      "lpDiff": 64,
+      "lpDiff": 44,
       "lpDiffOfPeak": 83
     },
     {
