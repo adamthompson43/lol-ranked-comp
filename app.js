@@ -136,14 +136,6 @@ async function main() {
 
   const infoCard = document.createElement("div");
     infoCard.className = "card info-text-card";
-    infoCard.innerHTML = `
-    <div class="info-content">
-        <h3>Info</h3>
-          <img 
-            src="assets/horse.png" 
-          />
-    </div>
-    `;
 grid.appendChild(infoCard);
 
   const updatedAt = new Date(data.updatedAt);
@@ -155,7 +147,7 @@ grid.appendChild(infoCard);
     let text;
     if (diffMinutes < 1) {
     text = "just now";
-    } else if (diffMinutes === 1) {
+    } else if (diffMinutes === 1) { 
     text = "1 minute ago";
     } else if (diffMinutes < 60) {
     text = `${diffMinutes} minutes ago`;
