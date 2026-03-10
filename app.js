@@ -134,10 +134,6 @@ async function main() {
     `;
   }).join("");
 
-  const infoCard = document.createElement("div");
-    infoCard.className = "card info-text-card";
-grid.appendChild(infoCard);
-
   const updatedAt = new Date(data.updatedAt);
   const now = new Date();
 
